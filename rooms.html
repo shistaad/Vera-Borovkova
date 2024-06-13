@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rooms</title>
+</head>
+<body>
+    <h1>Rooms</h1>
+    <ul>
+        {% for room in rooms %}
+            <li>
+                Room Number: {{ room[2] }} - Type: {{ room[3] }} - Price: {{ room[4] }} 
+                <a href="{{ url_for('book', room_id=room[0]) }}">Book</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

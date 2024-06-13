@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hotels</title>
+</head>
+<body>
+    <h1>Hotels</h1>
+    <ul>
+        {% for hotel in hotels %}
+            <li>
+                <a href="{{ url_for('rooms', hotel_id=hotel[0]) }}">{{ hotel[1] }}</a>
+                - {{ hotel[2] }} - Rating: {{ hotel[3] }}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
